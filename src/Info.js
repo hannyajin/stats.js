@@ -66,9 +66,21 @@ var Info = function () {
 
 		setMode: setMode,
 
-		setInfo: function(text) {
+		// set
+		setAll: function(text) {
 			this.setInfo1(text);
 			this.setInfo2(text);
+		},
+
+		setInfo: function(text) {
+			switch ( mode ) {
+					case 0:
+						this.setInfo1(text);
+						break;
+					case 1:
+						 this.setInfo2(text);
+						 break;
+			}
 		},
 
 		setInfo1: function(text) {
@@ -77,7 +89,50 @@ var Info = function () {
 
 		setInfo2: function(text) {
 			msText.textContent = text;
-		}
+		},
+
+		// get
+		getInfo: function(text) {
+			switch ( mode ) {
+					case 0:
+						return this.getInfo1();
+					case 1:
+						return this.getInfo2();
+			}
+		},
+
+		getInfo1: function(text) {
+			return fpsText.textContent;
+		},
+
+		getInfo2: function(text) {
+			return msText.textContent;
+		},
+
+		// append
+		appendAll: function(text) {
+			this.appendInfo1(text);
+			this.appendInfo2(text);
+		},
+
+		appendInfo: function(text) {
+			switch ( mode ) {
+					case 0:
+						this.appendInfo1(text);
+						break;
+					case 1:
+						this.appendInfo2(text);
+						break;
+			}
+		},
+
+		appendInfo1: function(text) {
+			fpsText.fpsText += text;
+		},
+
+		appendInfo2: function(text) {
+			msText.textContent += text;
+		},
 
 	}
 
