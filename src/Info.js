@@ -66,6 +66,11 @@ var Info = function () {
 
 		setMode: setMode,
 
+		setInfo: function(text) {
+			this.setInfo1(text);
+			this.setInfo2(text);
+		},
+
 		setInfo1: function(text) {
 			fpsText.textContent = text;
 		},
