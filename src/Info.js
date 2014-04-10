@@ -127,7 +127,7 @@ var Info = function () {
 		},
 
 		appendInfo1: function(text) {
-			fpsText.fpsText += text;
+			fpsText.textContent += text;
 		},
 
 		appendInfo2: function(text) {
