@@ -18,7 +18,7 @@ info.domElement.style.position = 'absolute';
 info.domElement.style.left = '0px';
 info.domElement.style.top = '0px';
 
-document.body.appendChild( stats.domElement );
+document.body.appendChild( info.domElement );
 
 setInterval( function () {
 
